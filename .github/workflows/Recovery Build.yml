@@ -114,7 +114,7 @@ jobs:
       run: |
         cd ${{ steps.pwd.outputs.workspace-folder }}/fox_${{ github.event.inputs.MANIFEST_BRANCH }}
         git clone ${{ github.event.inputs.COMMON_TREE_URL }} -b ${{ github.event.inputs.DEVICE_TREE_BRANCH }} ./123456
-        cp 123456/oplus/ossi ${{ github.event.inputs.COMMON_PATH }}
+        mv 123456/oplus/ossi ${{ github.event.inputs.COMMON_PATH }}
       working-directory: ${{ steps.pwd.outputs.workspace-folder }}
 
     - name: Set Swap Space
